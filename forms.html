@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forms</title>
+</head>
+<body>
+<!--html form method Post or Get   action is the destination-->
+    <form method="POST" action="https://request-inspector.glitch.me/">
+<!--        labels on forms must match id of input element-->
+        <label for="email">Email</label>
+        <input id="email" type="email" name="email"  placeholder="Enter a valid Email">
+        <br>
+        <label for="password">Password</label>
+        <input id="password" type="password" name="password" placeholder="Enter your Password">
+        <br>
+        <label for="bio">Bio</label>
+<!--        text area can be defined with set rows and columns-->
+        <textarea id="bio" name="bio" rows="4" cols="50" ></textarea>
+        <hr>
+<!--  elements relating to the same question should share a name attribute-->
+        <h2>How did you hear about us?</h2>
+        Billboard <input type="radio" name="reference" value="billboard"><br>
+        Radio <input type="radio" name="reference" value="radio advertisement"><br>
+        Internet <input type="radio" name="reference" value="internet ad"><br>
+        Other <input type="radio" name="reference" value="other"><br>
+
+
+    </form>
+</body>
+</html>
