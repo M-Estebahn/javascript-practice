@@ -28,7 +28,7 @@ function analyzeColor(color){
         case "red":
             return "Red, like the best Hot Sauce";
         default:
-            return "Hmm, I don't know anything about"+color;
+            return "Hmm, I don't know anything about "+color;
     }
 }
 console.log(analyzeColor("blue"));
@@ -48,6 +48,8 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * You should see a different message every time you refresh the page
  */
 
+console.log(analyzeColor(randomColor));
+
 /**
  * TODO:
  * Comment out the code above, and refactor your function to use a switch-case statement
@@ -61,6 +63,9 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  */
 
 /* ########################################################################## */
+var userColor=prompt("Please type a color in the box")
+
+console.log(analyzeColor(userColor));
 
 /**
  * TODO:
@@ -81,7 +86,21 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
+function calculateTotal(discountCode,amountDue){
+    switch (discountCode) {
+        case 1:
+            return "$"+(amountDue-(amountDue*.10)).toFixed(2);
+        case 2:
+            return "$"+(amountDue-(amountDue*.25)).toFixed(2);
+        case 3:
+            return "$"+(amountDue-(amountDue*.35)).toFixed(2);
+        case 4:
+            return "$"+(amountDue-(amountDue*.50)).toFixed(2);
+        case 5:
+            return "Free!!!"
 
+    }
+}
 /**
  * TODO:
  * Uncomment the line below to generate a random number between 0 and 5.
@@ -91,23 +110,10 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
-// var luckyNumber = Math.floor(Math.random() * 6);
+var luckyNumber = Math.floor(Math.random() * 6);
 
-/**
- * TODO:
- * Write some JavaScript that uses a `confirm` dialog to ask the user if they
- * would like to enter a number. If they click 'Ok', prompt the user for a
- * number, then use 3 separate alerts to tell the user:
- *
- * - whether the number is even or odd
- * - what the number plus 100 is
- * - if the number is negative or positive
- *
- * Do *NOT* display any of the above information
- * if the user enters a value that is not of the number data type.
- * Instead, use an alert to inform them of the incorrect input data type.
- *
- *
- * Can you refactor your code to use functions?
- * HINT: The way we prompt for a value could be improved
- */
+var customerTotal=prompt("What is your bill amount?")
+alert("your lucky number is "+luckyNumber+" Your new total is $"+calculateTotal(luckyNumber,customerTotal))
+
+
+
