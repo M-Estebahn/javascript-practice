@@ -23,3 +23,34 @@ function randomEvenOrOdd(){
     }
 }
 randomEvenOrOdd();
+
+function stacks(){
+    for(var i=1;i<10;i++){
+        console.log(i.toString().repeat(i))
+    }
+}
+stacks()
+
+function byFives() {
+    for(var i=100;i>0;i-=5){
+        console.log(i)
+    }
+}
+byFives()
+
+function yourNumber(num){
+    for(var i=0;i<51;i++){
+        if(i%2===0){
+            continue;
+        }
+        if(i===num){
+            console.log("Yikes,Skipping number: "+i);
+        }else{
+            console.log("Here is an odd Number: "+i);
+        }
+    }
+}
+
+var userNumber=Number(prompt("Please enter an odd number between 1 and 50"));
+
+yourNumber(userNumber);
