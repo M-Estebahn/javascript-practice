@@ -54,3 +54,17 @@ function yourNumber(num){
 var userNumber=Number(prompt("Please enter an odd number between 1 and 50"));
 
 yourNumber(userNumber);
+
+function doubleTime(x) {
+    var i=0;
+    var numToBeDoubled=2;
+console.log(numToBeDoubled);
+    while(i<=x){
+        i++
+        numToBeDoubled*=2;
+        console.log(numToBeDoubled);
+    }
+}
+
+doubleTime(16);
+
